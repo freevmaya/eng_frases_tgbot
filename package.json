@@ -1,0 +1,26 @@
+{
+  "name": "english-trainer-bot",
+  "version": "1.0.0",
+  "description": "Интерактивный бот для изучения английских фраз",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "create-tables": "node scripts/create-tables.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "mysql2": "^3.11.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "telegram-bot",
+    "english-learning",
+    "language-trainer"
+  ],
+  "author": "",
+  "license": "ISC"
+}
