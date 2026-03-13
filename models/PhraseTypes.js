@@ -6,9 +6,9 @@ class PhraseTypes {
     
     async getActiveTypes() {
         const query = `
-            SELECT * FROM ${this.TABLE_NAME} 
-            WHERE is_active = 1 
-            ORDER BY \`order\` ASC, type_name ASC
+            SELECT * FROM ${this.TABLE_NAME} t
+            WHERE is_active = 1 AND (SELECT COUNT(id) FROM phrases WHERE type_id = t.id) > 0
+            ORDER BY t.\`order\` ASC, t.type_name ASC
         `;
         
         try {

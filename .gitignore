@@ -6,3 +6,4 @@ voices/
 .env
 node_modules
 package-lock.json
+config
