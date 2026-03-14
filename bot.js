@@ -175,7 +175,7 @@ class EnglishTrainerBot {
         
         const keyboard = Markup.inlineKeyboard(buttons);
         
-        const message = '📚 *Выберите тип фраз';
+        const message = `📚 *Выберите тип фраз:*\n\n${types.map(t => `• ${t.type_name}`).join('\n')}`;
         
         await ctx.editMessageText(message, {
             parse_mode: 'Markdown',
